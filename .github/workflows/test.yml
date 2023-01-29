@@ -1,0 +1,68 @@
+name: Test
+env:
+  php: "8.1"
+  node: "18.x"
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  test:
+    name: PHPUnit
+
+    runs-on: ubuntu-latest
+    if: "!contains('refs/heads/main', github.ref) || contains(github.event.head_commit.message, '[release]')"
+
+    steps:
+      # get code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # add github token for access to private repos
+      # - name: Add HTTP basic auth credentials
+      #   run: composer config -g github-oauth.github.com ${{ secrets.GH_TOKEN }}
+
+      # composer cache
+      - uses: actions/cache@v3
+        with:
+          path: ./vendor
+          key: composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            composer
+
+      # node cache
+      - uses: actions/cache@v3
+        with:
+          path: ./node_modules
+          key: node-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            node
+
+      # setup php
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ env.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick, fileinfo
+          coverage: pcov
+
+      # setup node
+      - name: Set Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.node }}
+
+      # composer dependencies
+      - name: Install Dependencies (Composer)
+        run: composer install --prefer-dist --no-interaction --no-progress --classmap-authoritative
+
+      # node dependencies
+      - name: Install Dependencies (Node)
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+
+      - name: Execute tests
+        run: ./vendor/bin/phpunit --configuration phpunit.xml --coverage-clover clover.xml --log-junit junit.xml

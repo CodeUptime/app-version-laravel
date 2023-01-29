@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "cm": "git cz"
+    "cm": "git cz",
+    "test": "./vendor/bin/phpunit"
   },
   "license": "MIT",
   "config": {
