@@ -7,7 +7,10 @@
     "autoload": {
         "psr-4": {
             "CodeUptime\\AppVersionLaravel\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
