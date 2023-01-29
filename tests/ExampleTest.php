@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-class TestCase extends \Orchestra\Testbench\TestCase
+class ExampleTest extends \Orchestra\Testbench\TestCase
 {
     public function testExample()
     {
