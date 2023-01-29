@@ -1,6 +1,7 @@
 {
     "name": "codeuptime/app-version-laravel",
     "description": "Access your application version in Laravel",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "autoload": {
