@@ -6,7 +6,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Codeuptime\\AppVersionLaravel\\": "src/"
+            "CodeUptime\\AppVersionLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
         }
     },
     "authors": [
@@ -23,5 +28,15 @@
         "post-autoload-dump": [
             "@php vendor/bin/testbench package:discover --ansi"
         ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CodeUptime\\AppVersionLaravel\\VersionServiceProvider"
+            ],
+            "aliases": {
+                "Version": "CodeUptime\\AppVersionLaravel\\Version"
+            }
+        }
     }
 }
