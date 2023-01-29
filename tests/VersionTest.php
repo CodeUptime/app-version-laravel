@@ -22,7 +22,7 @@ class VersionTest extends \Orchestra\Testbench\TestCase
 
     protected function getEnvironmentSetUp($app)
     {
-        $app['config']->set('version.base_path', realpath(__DIR__ . "/resources/"));
+        $app['config']->set('version.base_path', realpath(__DIR__ . "/scenario/"));
     }
 
     public function testVersionHelper()
