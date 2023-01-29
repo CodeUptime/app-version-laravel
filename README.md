@@ -1,6 +1,7 @@
-[![Packagist](https://img.shields.io/packagist/v/codeuptime/app-version-laravel.svg)](https://packagist.org/packages/codeuptime/app-version-laravel) [![Test](https://github.com/CodeUptime/app-version-laravel/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/CodeUptime/app-version-laravel/actions/workflows/test.yml) 
-
 # app-version-laravel
+
+[![Packagist](https://img.shields.io/packagist/v/codeuptime/app-version-laravel.svg)](https://packagist.org/packages/codeuptime/app-version-laravel) [![License](https://img.shields.io/packagist/l/codeuptime/app-version-laravel.svg)](https://packagist.org/packages/codeuptime/app-version-laravel) [![Test](https://github.com/CodeUptime/app-version-laravel/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/CodeUptime/app-version-laravel/actions/workflows/test.yml) 
+
 
 This package makes it easy to access current app version information if your Laravel application at runtime.
 
@@ -26,11 +27,17 @@ composer require codeuptime/app-version-laravel
 ### Configre App Service Provider
 The package should be included in your application automatically using Laravel's package auto-discovery functionality. If this does not work, you can always add the service provider manually to your `config/app.php`
 
+
 ```php
-/* 
- * Package Service Providers...
- */
-\CodeUptime\AppVersionLaravel\ServiceProvider::class
+// 'config/app.php'
+<?php
+
+'providers' => [
+    // Other Service Providers
+
+    \CodeUptime\AppVersionLaravel\ServiceProvider::class
+],
+
 ```
 
 ### Usage

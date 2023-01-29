@@ -29,12 +29,12 @@ class Version
 
     public static function composer()
     {
-        return self::jsonFile(base_path('composer.json'), 'version');
+        return self::jsonFile(config('version.base_path') . '/' . ('composer.json'), 'version');
     }
 
     public static function package()
     {
-        return self::jsonFile(base_path('package.json'), 'version');
+        return self::jsonFile(config('version.base_path') . '/' . ('package.json'), 'version');
     }
 
     public static function jsonFile(string $path, string $key)
