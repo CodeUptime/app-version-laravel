@@ -10,7 +10,7 @@ class Version
     {
         return (object)[
             'composer' => self::composer(),
-            'package' => self::composer(),
+            'package' => self::package(),
         ];
     }
 
