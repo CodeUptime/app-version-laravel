@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/codeuptime/app-version-laravel/compare/1.0.0...1.1.0) (2023-01-29)
+
+
+### Features
+
+* **tests:** added basic phpunit test runner ([826c01f](https://github.com/codeuptime/app-version-laravel/commit/826c01f9ddf670e153707309c301ccc9c43ee553))
+
 # 1.0.0 (2023-01-29)
 
 
