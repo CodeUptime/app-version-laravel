@@ -1,3 +1,18 @@
+# [1.2.0](https://github.com/codeuptime/app-version-laravel/compare/1.1.0...1.2.0) (2023-01-29)
+
+
+### Bug Fixes
+
+* **version:** call package helper for version info ([c68a3b5](https://github.com/codeuptime/app-version-laravel/commit/c68a3b5eb9748cab9b21dc0df36b1b536871779d))
+
+
+### Features
+
+* **commands:** added version & version:info cli commands ([0b8aec3](https://github.com/codeuptime/app-version-laravel/commit/0b8aec3fcd61f31d0a84b2ae023cb6a793989e4b))
+* **version:** added info(), current(), composer(), package(), and jsonFile() methods ([0064442](https://github.com/codeuptime/app-version-laravel/commit/00644425eb66f6f75eca5dc578e70eecc27f6aa6))
+* **version:** added version() helper function ([72d146e](https://github.com/codeuptime/app-version-laravel/commit/72d146ea2552216e2ccb3d1c5344c8908b61d4fe))
+* **version:** basic logic to get app version ([ca52ae5](https://github.com/codeuptime/app-version-laravel/commit/ca52ae5bbf8a87c5af494aefabdd81ab64c4900e))
+
 # [1.1.0](https://github.com/codeuptime/app-version-laravel/compare/1.0.0...1.1.0) (2023-01-29)
 
 
