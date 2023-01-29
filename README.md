@@ -79,3 +79,27 @@ this one returns a \stdClass object containing all version information
     "package": "1.2.0"
 }
 ```
+
+## Artisan Commands
+There are cases where you would like to use the application version number in your scripts and automated workflows. This package provides two commands 
+
+### version
+This command just returns the current version string. This makes it very usable as part of your CI/CD scripts or adding this version to other build artifacts such as API docs.
+
+```
+php artisan version
+1.6.0
+```
+
+### version:info
+This command is helpful when evaluating automation or debugging
+
+```
+php artisan version:info
++----------+---------+
+| Source   | Version |
++----------+---------+
+| composer | 1.6.0   |
+| package  | 1.6.0   |
++----------+---------+
+```
