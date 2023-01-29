@@ -1,11 +1,12 @@
 {
     "name": "codeuptime/app-version-laravel",
     "description": "Access your application version in Laravel",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Codeuptime\\LaravelAppVersion\\": "src/"
+            "Codeuptime\\AppVersionLaravel\\": "src/"
         }
     },
     "authors": [
@@ -14,5 +15,12 @@
             "email": "weigert.jonas@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "orchestra/testbench": "^7.19"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ]
+    }
 }
