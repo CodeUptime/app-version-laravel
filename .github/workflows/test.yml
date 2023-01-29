@@ -64,11 +64,5 @@ jobs:
         with:
           cmd: install
 
-      # build CSS/JS
-      - name: Create bundle
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: build
-
       - name: Execute tests
         run: ./vendor/bin/phpunit --configuration phpunit.xml --coverage-clover clover.xml --log-junit junit.xml
