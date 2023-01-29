@@ -1,0 +1,33 @@
+name: Tag Version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: New
+    if: "!contains(github.event.head_commit.message, '[release]')"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Set Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Install JS deps
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+
+      - name: Tag Version
+        run: ./node_modules/semantic-release/bin/semantic-release.js --no-ci
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

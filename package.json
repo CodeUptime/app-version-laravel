@@ -27,7 +27,7 @@
             "composer.json",
             "composer.lock"
           ],
-          "message": "chore(release): v${nextRelease.version} [release]"
+          "message": "[release] ${nextRelease.version}"
         }
       ],
       "@semantic-release/github"
