@@ -36,12 +36,39 @@ The package should be included in your application automatically using Laravel's
 ### Usage
 You can now get your application version 2 ways:
 
-#### Get version via helper function
+#### Get current version
+
 ```php
-version()
+version() 
+// = "1.6.0"
+
+\CodeUptime\AppVersionLaravel\Version::current()
+// = "1.6.0"
 ```
 
-#### Get version via Facade
+The current version logic checks the composer.json and package.json files for the `version` key in that order. As soon as a version value is found, that value is returned.
+
+#### Get composer.json version
 ```php
-\CodeUptime\AppVersionLaravel\Version::get()
+\CodeUptime\AppVersionLaravel\Version::composer()
+// = "1.2.0" from composer.json
+```
+
+#### Get package.json version
+```php
+\CodeUptime\AppVersionLaravel\Version::package()
+// = "1.2.0" from package.json
+```
+
+#### Get version information from all files
+```php
+\CodeUptime\AppVersionLaravel\Version::info()
+```
+
+this one returns a \stdClass object containing all version information
+```
+{ 
+    "composer": "1.2.0"
+    "package": "1.2.0"
+}
 ```
