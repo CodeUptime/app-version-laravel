@@ -35,7 +35,7 @@ The package should be included in your application automatically using Laravel's
 'providers' => [
     // Other Service Providers
 
-    \CodeUptime\AppVersionLaravel\ServiceProvider::class
+    \CodeUptime\AppVersionLaravel\VersionServiceProvider::class
 ],
 
 ```
