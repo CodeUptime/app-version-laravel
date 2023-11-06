@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/codeuptime/app-version-laravel/compare/1.4.0...1.4.1) (2023-11-06)
+
+
+### Bug Fixes
+
+* **set in json file command:** use "option" instead of "argument" to load command params ([c367925](https://github.com/codeuptime/app-version-laravel/commit/c3679255e9c6233a48ed3de7982306a72ed40579))
+
 # [1.4.0](https://github.com/codeuptime/app-version-laravel/compare/1.3.0...1.4.0) (2023-11-06)
 
 
