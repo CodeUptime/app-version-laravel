@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/codeuptime/app-version-laravel/compare/1.3.0...1.4.0) (2023-11-06)
+
+
+### Features
+
+* **dependencies:** updated existing dependencies ([ff54e11](https://github.com/codeuptime/app-version-laravel/commit/ff54e11cb307da2d8504a717b792e5c280bf2362))
+
 # [1.3.0](https://github.com/codeuptime/app-version-laravel/compare/1.2.0...1.3.0) (2023-11-06)
 
 
