@@ -4,7 +4,8 @@ namespace CodeUptime\AppVersionLaravel;
 
 use CodeUptime\AppVersionLaravel\Console\Version\Current;
 use CodeUptime\AppVersionLaravel\Console\Version\Info;
-use \CodeUptime\AppVersionLaravel\Version;
+use CodeUptime\AppVersionLaravel\Console\Version\SetInJsonFile;
+use CodeUptime\AppVersionLaravel\Version;
 use Illuminate\Support\ServiceProvider;
 
 class VersionServiceProvider extends ServiceProvider
@@ -24,6 +25,7 @@ class VersionServiceProvider extends ServiceProvider
             $this->commands([
                 Current::class,
                 Info::class,
+                SetInJsonFile::class,
             ]);
         }
     }

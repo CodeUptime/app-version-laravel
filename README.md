@@ -103,3 +103,15 @@ php artisan version:info
 | package  | 1.6.0   |
 +----------+---------+
 ```
+
+
+### version:set-in-json-file --file=/path/to/some/file.json --path=path.to.some.key.in.json.object
+
+This command sets the current version number to a key in a json file. 
+This can be in automated CI/CD pipelines that publish OpenAPI or
+Swagger based documentation and you want to include the 
+application version with your documentation bundle.
+
+```
+version:set-in-json-file --file={openapi.json} --path=info.version
+```
