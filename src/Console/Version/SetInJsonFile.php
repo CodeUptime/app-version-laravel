@@ -13,8 +13,8 @@ class SetInJsonFile extends Command
 
     public function handle()
     {
-        $filePath = base_path($this->argument('file'));
-        $jsonPath = $this->argument('path');
+        $filePath = base_path($this->option('file'));
+        $jsonPath = $this->option('path');
 
         // check file exists
         if(!file_exists($filePath)) {
