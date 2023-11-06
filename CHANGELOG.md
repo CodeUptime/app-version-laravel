@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/codeuptime/app-version-laravel/compare/1.2.0...1.3.0) (2023-11-06)
+
+
+### Features
+
+* **set in json file:** added command to set current version in json file ([89c13ba](https://github.com/codeuptime/app-version-laravel/commit/89c13bafd5c6e8b95e7a7c0dcf26042b4d3c6081))
+
 # [1.2.0](https://github.com/codeuptime/app-version-laravel/compare/1.1.0...1.2.0) (2023-01-29)
 
 
